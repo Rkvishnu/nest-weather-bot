@@ -23,12 +23,9 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
     profile: any,
     done: VerifyCallback,
   ): Promise<any> {
-    // You need to implement user validation logic here
-    // Typically, you would create or retrieve the user based on the Google profile
-    // You can use the authService to perform user-related operations
-    // Example:
-    // const user = await this.authService.validateUserFromGoogleProfile(profile);
+    
+    const user = await this.authService.validateUserFromGoogleProfile(profile);
 
-    // Call done(null, user) if the user is validated successfully, or done(err) if there's an error
+    Call done(null, user);
   }
 }
