@@ -9,10 +9,8 @@ export class AdminPanelController {
   @Get()
   @UseGuards(AdminAuthGuard)
   async index(@Request() req) {
-    // Implement the admin panel logic here
-    // You can access user information from req.user
+   
     return { message: 'Welcome to the admin panel!' };
   }
 
-  // Implement other admin panel routes, such as user management and bot settings
-}
+ }
